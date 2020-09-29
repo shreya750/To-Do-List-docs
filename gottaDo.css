@@ -1,0 +1,13 @@
+.heading{
+    display:flex;
+    align-items:center;/*not working*/
+    font-size: medium;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+
+#columns{
+    display:flex;
+    flex-direction: column;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

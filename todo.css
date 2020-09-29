@@ -1,0 +1,68 @@
+/*
+use flexbox for columns-
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+
+make checkbox in to-do
+*/
+.body{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px; 
+    padding-top: 3em;
+    cursor: pointer;
+}
+
+.h1{
+    font-family: 'Times New Roman', Times, serif;
+    color:black ;
+    text-align:center;
+    border:5px solid black;
+ 
+ 
+ }
+#columns{ /*add open new,view all,save,delete,close button in each cards */
+    display: grid;
+    align-items: flex-end; /*display:column??*/
+    grid-template-columns: repeat(3,1fr);
+    color:black;    
+    
+}
+.input{  /*not woking*/
+    /*border:none;
+    border-color: transparent;*/
+    outline:none;
+}
+
+
+.todo{
+ 
+}
+.notes{
+
+}
+.events{
+
+}
+/* https://www.w3schools.com/css/css3_buttons.asp */
+
+/*white base,black text,black border,on hover black*/
+.buttons{  /*remove grey color from buttons*/
+    background-color: white;
+    color:black;
+    border:2px solid black;
+    border-radius: 3px;
+    transition-duration: 0.4s;
+    padding:5px  5px;
+    text-align:center;
+    text-decoration: none;
+    font-size:12px;
+    /*width:60px ;*/
+    width:fit-content;
+
+}
+.buttons:hover{
+    background-color: black;
+    color:white;
+}
+
+
