@@ -13,7 +13,7 @@
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
         
         <link rel="stylesheet" type="text/css" href="todo.css">
-        <script src="gottaDO.js" type="module"></script> 
+        <script src="todo.js"></script> 
     </head>
     <body>
         <div id="columns"><!--firstpage-->
@@ -21,9 +21,9 @@
                        <!--limit for checkbox/input==== 4-5 items for now-->
                        <!--add checkbox in front of text-->
                        <div class="input">
-                        <input type="text" id="title" placeholder="Title"><br>
+                        <input type="text" id="title1" placeholder="Title"><br>
                         
-                       <textarea name="todo" cols="20" rows="20" wrap="hard"></textarea><!--add checkbox and strikethrough -->
+                       <textarea name="todo" cols="70" rows="1" wrap="hard" id = "textbox1"></textarea><!--add checkbox and strikethrough -->
                        </div>
                        <!--add new input button,remove the box around input-->
                        <div>
@@ -34,7 +34,7 @@
                      
                         <a href="gottaDo.html"><button class="buttons" type="button">close</button></a>
                             <!--go back to first page-->
-                        <button class="buttons" type="button">open</button>  <!--open new,open old cards--> 
+                        <button class="buttons" type="button" onclick="getToDoListData()">loadData</button>  <!--open new,open old cards--> 
                             <!--we open the saved files by reading the files-->
                     
                         
