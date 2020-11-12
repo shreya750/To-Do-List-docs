@@ -20,9 +20,10 @@
     </head>
     
     <body onload="readMasterBinContent()">
-        <div id="column">
-            <div class="todo"><b>To-Do</b>
-                       <div class="input">
+    <div class="container">
+        <!-- <section class="column"> -->
+            <div class="left"><b>To-Do</b>
+                       
                         <input type="text" id="title1" placeholder="Title"><br>
                            <table id="todoTable1">
                                <tr>
@@ -40,9 +41,8 @@
                                  </button><!--can add "+" icon(bootstrap)  -->
                 
                                </tr>
-                           </div>
-                       
-                       <div>
+                            </table>
+
                         
                         <button class = "buttons" type="button" onclick="updateContentforBin('todoTable1')">save</button>
                         <!--we sav following 3 things:1)is the item checked or not 2)description of item 3)datetime of item-->
@@ -54,79 +54,59 @@
                     
                         <button class="buttons" type="button" id="datetimeButton">Date-Time<input type="datetime-local" 
                             id="calender1" name="calender" ></button>
-                         
-                    </div>
-
-            <!-- </div> -->
+                
             </div>
-        </div>
-            <div id="column">
-                <div class="todo">
-                    <b>To-Do</b>
-                               <div class="input">
-                                <input type="text" id="title1" placeholder="Title"><br>
-                                   <table id="todoTable2">
-                                       <tr>
-                                           <th>checkbox</th>
-                                           <th>description</th>
-                                           <th></th>
-                                       </tr> 
-                                    
-                                   </table>
-                                   
-                                   <table>
-                                    <tr>
-                                        <button class="buttons" type="button" onclick="createTableforNewList('todoTable2')">
-                                            Add Item
-                                         </button><!--can add "+" icon(bootstrap)  -->
+        
+            <div class="center"><b>To-Do</b>
+                    <input type="text" id="title1" placeholder="Title"><br>
+                    <table id="todoTable2">
+                        <tr>
+                            <th>checkbox</th>
+                            <th>description</th>
+                            <th></th>
+                        </tr> 
                         
-                                       </tr>
-        
-                               </div>
-                               <!--add new input button,remove the box around input-->
-                               <div>
-                                
-                                <button class = "buttons" type="button" onclick="updateContentforBin('todoTable2')">save</button>
-                                <!--we sav following 3 things:1)is the item checked or not 2)description of item 3)datetime of item-->
-                                <button class="buttons" type="button"onclick="deleteContent(); deleteRow(this); addItem();">delete</button>
-                                   <!--we delete the file from disc-->
-                             
-                                <a href="gottaDo.html"><button class="buttons" type="button">close</button></a>
-                                    <!--go back to first page-->
-                                <button class="buttons" type="button" id="datetimeButton">Date-Time<input type="datetime-local" 
-                                    id="calender1" name="calender" ></button>
-                                 
-                            </div>
-        
-                    <!-- </div> -->
-                 </div> 
-            </div>
+                    </table>
+                    
+                    <table>
+                        <tr>
+                            <button class="buttons" type="button" onclick="createTableforNewList('todoTable2')">
+                                Add Item
+                            </button><!--can add "+" icon(bootstrap)  -->
+            
+                        </tr>
+                    </table>
+                            <button class = "buttons" type="button" onclick="updateContentforBin('todoTable2')">save</button>
+                            <!--we sav following 3 things:1)is the item checked or not 2)description of item 3)datetime of item-->
+                            <button class="buttons" type="button"onclick="deleteContent(); deleteRow(this); addItem();">delete</button>
+                            <!--we delete the file from disc-->
+                        
+                            <a href="gottaDo.html"><button class="buttons" type="button">close</button></a>
+                                <!--go back to first page-->
+                            <button class="buttons" type="button" id="datetimeButton">Date-Time<input type="datetime-local" 
+                                id="calender1" name="calender" ></button>
+                </div>
           
-            <div id="column">
-                <div class="todo"><b>To-Do</b>
-                    <div class="input">
-                     <input type="text" id="title1" placeholder="Title"><br>
-                        <table id="todoTable3">
-                            <tr>
-                                <th>checkbox</th>
-                                <th>description</th>
-                                <th></th>
-                            </tr>
-                         
-                        </table>
-                        
-                        <table>
-                         <tr>
-                             <button class="buttons" type="button" onclick="createTableforNewList('todoTable3')">
-                                 Add Item
-                              </button><!--can add "+" icon(bootstrap)  -->
-             
-                            </tr>
-                   
-                    </div>
-                    <!--add new input button,remove the box around input-->
-                    <div>
-                     
+            <div class="right">
+               <b>To-Do</b>
+                <input type="text" id="title1" placeholder="Title"><br>
+                <table id="todoTable3">
+                    <tr>
+                        <th>checkbox</th>
+                        <th>description</th>
+                        <th></th>
+                    </tr>
+                    
+                </table>
+                
+                <table>
+                    <tr>
+                        <button class="buttons" type="button" onclick="createTableforNewList('todoTable3')">
+                            Add Item
+                        </button><!--can add "+" icon(bootstrap)  -->
+        
+                    </tr>
+                </table>
                      <button class = "buttons" type="button" onclick="updateContentforBin('todoTable3')">save</button>
                      <!--we sav following 3 things:1)is the item checked or not 2)description of item 3)datetime of item-->
                      <button class="buttons" type="button"onclick="deleteContent(); deleteRow(this); addItem();">delete</button>
@@ -135,16 +115,12 @@
                      <a href="gottaDo.html"><button class="buttons" type="button">close</button></a>
                          <!--go back to first page-->
                  
-                     
                      <button class="buttons" type="button" id="datetimeButton">Date-Time<input type="datetime-local" 
                          id="calender1" name="calender" ></button>
-                         
-                 </div>
-
-         </div>
             </div>
             
-            
+        <!-- </section>    -->
+    </div> 
         
     </body>
     
