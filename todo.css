@@ -11,6 +11,28 @@ make checkbox in to-do
     padding-top: 3em;
     cursor: pointer;
 }
+* {
+    box-sizing: border-box;
+ }
+ .left, .right, .center {
+    float: left;
+    width: 33%;
+    padding: 10px;
+    height: 600px;
+    text-align: center;
+ }
+ .left {
+    /* background-color: tomato; */
+ }
+ .right {
+    /* background-color: teal; */
+ }
+ .center {
+    /* background-color: rgb(166, 71, 255); */
+ }
+ .container:after {
+    clear: both;
+ }
 
 .h1{
     font-family: 'Times New Roman', Times, serif;
@@ -20,34 +42,26 @@ make checkbox in to-do
  
  
  }
- /* #columns{
-     column-count: 3;
-     column-width: 33%;
- } */
- /* .column{
-    column-count: 3;
-    column-width: 33%;
-     display:flex;
-     flex-flow:row wrap;
-     justify-content: center;
-
-     
- } */
- #column{
-    display: grid;
-    align-items: flex-end; /*display:column??*/
-    grid-template-columns: repeat(3,1fr);
-    color:black;  
+ .wrapper{
+     padding:5pz;
+     max-width: 960px;
+     width: 95%;
+     margin:20px auto;
  }
- 
- /* .left, .right, .center {
-    float: left;
+.column{
+    display:flex;
+    flex-flow:row wrap;
+    justify-content: center;
+    margin:5px;
+}
+ .todo{
     width: 33%;
-    padding: 10px;
-    height: 900px;
-    text-align: center;
- } */
-
+     flex:1;
+     border:1px solid blue;
+     margin:5px;
+     padding:5px;
+     background-color: antiquewhite;
+ }
 .input{  /*not woking*/
     /*border:none;
     border-color: transparent;*/
@@ -85,5 +99,7 @@ make checkbox in to-do
     background-color: black;
     color:white;
 }
+
+
 
 

@@ -23,7 +23,7 @@ req.send(getValues());
 }
 
 
-function updateContentforBin(tableId){
+function updateContentforBin(tableId,calenderId,titleId){
     //console.log("save clicked");
     let req = new XMLHttpRequest();
     req.onreadystatechange = () => {
@@ -32,11 +32,11 @@ function updateContentforBin(tableId){
         }
     };
         var binID=binMap.get(tableId);
-        console.log("updting bin ID",binID);
+        //console.log("updting bin ID",binID);
         req.open("PUT",`https://api.jsonbin.io/b/${binID}`,true);
         req.setRequestHeader("Content-Type","application/json");
         req.setRequestHeader("secret-key","$2b$10$2YIqY.HRw6Eg3CrHnUOQQOi2kAM1VC/.BHDisAClfkSGAZGfKtZGq");
-        req.send(getValues(tableId));
+        req.send(getValues(tableId,calenderId,titleId));
    
 }
 
@@ -76,7 +76,7 @@ function insertRowInTable(txtbox,checkbox, tableId){
     var chbox=document.createElement("INPUT");
     chbox.setAttribute("type","checkbox");
     chbox.value=checkbox;
-    console.log("getting checks frm server!",chbox.value);
+    //console.log("getting checks frm server!",chbox.value);
     
     chbox.addEventListener("change",function(){
         if(this.checked){ //check syntax
@@ -101,7 +101,7 @@ function insertRowInTable(txtbox,checkbox, tableId){
 
     //     txt.style.textDecoration="none";
     // }
-    var delStr = "<input type=\"button\" class = \"buttons\" value=\"Delete\" onclick=\"deleteRow(this)\"/>";
+    var delStr = "<input type=\"button\" class = \"buttons\" value=\"delete\" onclick=\"deleteRow(this)\"/>";
     cell3.innerHTML= delStr;
 
 cell1.appendChild(chbox);
@@ -113,10 +113,11 @@ table.appendChild(rows);
 
 //master bin created to store separate bin IDs.
 function displayMasterbinData(response){
+    console.log("final response data: ",response);
     var parsed=JSON.parse(response);
+    console.log("final parsed data: ",parsed);
     for(let i=0;i<parsed.todobinList.length;i++){
         binArray.push(parsed.todobinList[i].bin);
-        
     }
     
     displayResponseData(binArray);
@@ -131,10 +132,13 @@ function displayResponseData(binArray){
         binId = binArray[j];
         // create 3 table in 3 column with table id as todoTable1, todoTable2,todoTable3 
         var tableId = `todoTable${j+1}`;
+        var calenderId="calender"+ tableId.charAt(tableId.length-1);
+        var titleId="title"+ tableId.charAt(tableId.length-1);
+        console.log("cl id,title id",calenderId,titleId);
         tableIDarray.push(tableId);
         binMap.set(tableId,binId);
         console.log(`generating table id ${tableId} for binId ${binId}`);
-        readBinContentAndLoadTable(binId,tableId);  
+        readBinContentAndLoadTable(binId,tableId,calenderId,titleId);  
     }
      
 
@@ -160,7 +164,7 @@ function readMasterBinContent() {
     req.send();
 }
 
-function readBinContentAndLoadTable(binId,tableId) {
+function readBinContentAndLoadTable(binId,tableId,calenderId,titleId) {
     let req=new XMLHttpRequest();
     console.log("readcontent called");
     req.onreadystatechange = () => {
@@ -172,9 +176,12 @@ function readBinContentAndLoadTable(binId,tableId) {
         for(let i=0;i<parsed.finalList.length;i++){
             var txtbox=parsed.finalList[i].description;
             var checkbox=parsed.finalList[i].checkbox;
-            console.log("valueofdes,checkbox is ",txtbox,checkbox,i);
+            //console.log("valueofdes,checkbox is ",txtbox,checkbox,i);
             insertRowInTable(txtbox,checkbox, tableId);
         }
+        document.getElementById(titleId).value=parsed.title;
+        document.getElementById(calenderId).value=parsed.time;
+        
         //document.getElementById("mytable").deleteRow(1);   
         if(parsed.finalList.length  === 0){
             insertRowInTable("",false,tableId);// to add one empty "addItem" box
