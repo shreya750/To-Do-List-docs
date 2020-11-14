@@ -44,21 +44,17 @@
                             </table>
 
                         
-                        <button class = "buttons" type="button" onclick="updateContentforBin('todoTable1')">save</button>
-                        <!--we sav following 3 things:1)is the item checked or not 2)description of item 3)datetime of item-->
-                        <button class="buttons" type="button"onclick="deleteContent(); deleteRow(this); addItem();">delete</button>
-                           <!--we delete the file from disc-->
-                     
-                        <a href="gottaDo.html"><button class="buttons" type="button">close</button></a>
-                            <!--go back to first page-->
-                    
-                        <button class="buttons" type="button" id="datetimeButton">Date-Time<input type="datetime-local" 
-                            id="calender1" name="calender" ></button>
+                            <button class="buttons" type="button" >Date-Time<input type="datetime-local" 
+                                id="calender1" name="calender" ></button>
+                             <button class = "buttons" type="button" onclick="updateContentforBin('todoTable1','calender1','title1')">save</button>
+                             <!--we sav following 3 things:1)is the item checked or not 2)description of item 3)datetime of item-->
+                             <button class="buttons" type="button"onclick="deleteContent(); deleteRow(this); addItem();">delete</button>
+                                <!--we delete the file from disc-->
                 
             </div>
         
             <div class="center"><b>To-Do</b>
-                    <input type="text" id="title1" placeholder="Title"><br>
+                    <input type="text" id="title2" placeholder="Title"><br>
                     <table id="todoTable2">
                         <tr>
                             <th>checkbox</th>
@@ -76,20 +72,18 @@
             
                         </tr>
                     </table>
-                            <button class = "buttons" type="button" onclick="updateContentforBin('todoTable2')">save</button>
-                            <!--we sav following 3 things:1)is the item checked or not 2)description of item 3)datetime of item-->
-                            <button class="buttons" type="button"onclick="deleteContent(); deleteRow(this); addItem();">delete</button>
-                            <!--we delete the file from disc-->
-                        
-                            <a href="gottaDo.html"><button class="buttons" type="button">close</button></a>
-                                <!--go back to first page-->
-                            <button class="buttons" type="button" id="datetimeButton">Date-Time<input type="datetime-local" 
-                                id="calender1" name="calender" ></button>
+                    <button class="buttons" type="button" >Date-Time<input type="datetime-local" id="calender2"
+                         name="calender" ></button>
+                     <button class = "buttons" type="button" onclick="updateContentforBin('todoTable2','calender2','title2')">save</button>
+                     <!--we sav following 3 things:1)is the item checked or not 2)description of item 3)datetime of item-->
+                     <button class="buttons" type="button"onclick="deleteContent(); deleteRow(this); addItem();">delete</button>
+                        <!--we delete the file from disc-->
+                  
                 </div>
           
             <div class="right">
                <b>To-Do</b>
-                <input type="text" id="title1" placeholder="Title"><br>
+                <input type="text" id="title3" placeholder="Title"><br>
                 <table id="todoTable3">
                     <tr>
                         <th>checkbox</th>
@@ -107,21 +101,22 @@
         
                     </tr>
                 </table>
-                     <button class = "buttons" type="button" onclick="updateContentforBin('todoTable3')">save</button>
+                    <button class="buttons" type="button" >Date-Time<input type="datetime-local" 
+                        id="calender3" name="calender" ></button>
+                     <button class = "buttons" type="button" onclick="updateContentforBin('todoTable3','calender3','title3')">save</button>
                      <!--we sav following 3 things:1)is the item checked or not 2)description of item 3)datetime of item-->
                      <button class="buttons" type="button"onclick="deleteContent(); deleteRow(this); addItem();">delete</button>
                         <!--we delete the file from disc-->
-                  
-                     <a href="gottaDo.html"><button class="buttons" type="button">close</button></a>
-                         <!--go back to first page-->
                  
-                     <button class="buttons" type="button" id="datetimeButton">Date-Time<input type="datetime-local" 
-                         id="calender1" name="calender" ></button>
-            </div>
+                    </div>
             
         <!-- </section>    -->
     </div> 
-        
+    
     </body>
+    <button class="buttons" type="button" onclick="saveAllFunction()">save all</button>
+    <a href="gottaDo.html"><button class="buttons" type="button">close</button></a>
+    <!--go back to first page-->
+    
     
 </html>

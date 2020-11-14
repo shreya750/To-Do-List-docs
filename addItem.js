@@ -40,10 +40,10 @@ function createTableforNewList(tableId){
     cell2.appendChild(txt);
     cell3.innerHTML= delStr;
     table.appendChild(rows);
-    console.log("after adding item to table");
-    for(let i = 1; i < document.getElementById(tableId).rows.length ;i++ ){
-      console.log("value at index ", i, " is ", document.getElementById(tableId).rows[i].cells[1].children[0].value)
-    }
+    //console.log("after adding item to table");
+    // for(let i = 1; i < document.getElementById(tableId).rows.length ;i++ ){
+    //   console.log("value at index ", i, " is ", document.getElementById(tableId).rows[i].cells[1].children[0].value)
+    // }
 }
 
 
@@ -57,30 +57,27 @@ function todoItem(checkbox, description) {
     return countrow;
 }
 
-  function getValues(tableId){
+  function getValues(tableId,calenderId,titleId){
     var todoList=[];
-    //i starts from 2 is a problem for loaded todoLists
-    //it works for empty lists though
+    
     for(let i=1;i<countRows(tableId);i++){
         var check=document.getElementById(tableId).rows[i].cells[0].children[0].checked;
         var textArea=document.getElementById(tableId).rows[i].cells[1].children[0].value;
-        console.log("getValues me dono ki val ",check,textArea," ",i);
+        //console.log("getValues me dono ki val ",check,textArea," ",i);
          todoList.push( new todoItem(check,textArea))
     }
-    var dateTime=document.getElementById("calender1").value;
+    var dateTime=document.getElementById(calenderId).value;
+    console.log("time value",dateTime);
+    var listTitle=document.getElementById(titleId).value;
     
     var finalValues={
         finalList:todoList, 
-        time:dateTime
+        time:dateTime,
+        title:listTitle
     }
     var strigified=JSON.stringify(finalValues);
     console.log(strigified);
     return strigified
 }
 
-  // function addNewList(){
-  //   var newTable=document.getElementById("columns");
-  //  console.log(newTable);
-
-
-  // }
+  
