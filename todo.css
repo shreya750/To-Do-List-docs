@@ -11,9 +11,18 @@ make checkbox in to-do
     padding-top: 3em;
     cursor: pointer;
 }
-* {
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+/* * {
     box-sizing: border-box;
- }
+ } */
+
+ 
+
  .left, .right, .center {
     float: left;
     width: 33%;
@@ -21,19 +30,21 @@ make checkbox in to-do
     height: 600px;
     text-align: center;
  }
- .left {
-    /* background-color: tomato; */
- }
- .right {
-    /* background-color: teal; */
- }
- .center {
-    /* background-color: rgb(166, 71, 255); */
- }
- .container:after {
-    clear: both;
- }
 
+ .bottom{
+    float: top;
+    align-items: baseline;
+    width:100%;    
+    margin-left:47%;
+   
+    
+}
+ 
+ /* .container:after {
+    clear: both;
+ } */
+
+  
 .h1{
     font-family: 'Times New Roman', Times, serif;
     color:black ;
@@ -54,30 +65,13 @@ make checkbox in to-do
     justify-content: center;
     margin:5px;
 }
- .todo{
-    width: 33%;
-     flex:1;
-     border:1px solid blue;
-     margin:5px;
-     padding:5px;
-     background-color: antiquewhite;
- }
+ 
 .input{  /*not woking*/
     /*border:none;
     border-color: transparent;*/
     outline:none;
 }
 
-
-/* .todo{
- 
-}
-.notes{
-
-}
-.events{
-
-} */
 /* https://www.w3schools.com/css/css3_buttons.asp */
 
 /*white base,black text,black border,on hover black*/
@@ -101,5 +95,41 @@ make checkbox in to-do
 }
 
 
+/* .bottom.newButton{
+    width:100%;
+
+} */
+/* #savenclose{
+    align-items: baseline;
+    width: 30px;
+  border: 15px solid rgb(138, 224, 138);
+  padding: 50px;
+  margin: 20px;
+} */
+
+/* .savenclose.newButton{
+    position:relative;
+    left: 50%;
+    margin-top:50%;
+    
+}
+*/
+
+.newButton{  /*remove grey color from buttons*/
+    background-color: white;
+    color:black;
+    border:2px solid black;
+    border-radius: 3px;
+    transition-duration: 0.4s;
+    padding:5px  5px;
+    text-align:center;
+    text-decoration: none;
+    font-size:12px;
+    width:fit-content;
+}
+.newButton:hover{
+    background-color: black;
+    color:white;
+}
 
 
