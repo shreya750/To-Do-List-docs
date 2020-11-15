@@ -32,9 +32,9 @@ function createTableforNewList(tableId){
         }
     });
 
-    //var del=document.createElement("BUTTON");
-    //del.innerHTML="remove";
-    var delStr = "<input type=\"button\" class = \"buttons\" value=\"Delete\" onclick=\"deleteRow(this)\"/>";
+    
+    //var delStr = "<input type=\"button\" class = \"buttons\" value=\"Delete\" onclick=\"deleteRow(this)\"/>";
+    var delStr = "<button type=\"button\" class=\"buttons\" onclick=\"deleteRow(this)\"> <span class=\"glyphicon glyphicon-trash\" ></span></button>"
     
     cell1.appendChild(chbox);
     cell2.appendChild(txt);

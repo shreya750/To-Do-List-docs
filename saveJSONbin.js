@@ -96,12 +96,10 @@ function insertRowInTable(txtbox,checkbox, tableId){
         chbox.checked=true;
     }
    
-    // else {
-    //     //console.log("2 checked");
+    
+    //var delStr = "<input type=\"button\" class = \"buttons\" value=\"delete\" onclick=\"deleteRow(this)\"/>";
+    var delStr = "<button type=\"button\" class=\"buttons\" onclick=\"deleteRow(this)\"> <span class=\"glyphicon glyphicon-trash\" ></span></button>"
 
-    //     txt.style.textDecoration="none";
-    // }
-    var delStr = "<input type=\"button\" class = \"buttons\" value=\"delete\" onclick=\"deleteRow(this)\"/>";
     cell3.innerHTML= delStr;
 
 cell1.appendChild(chbox);
