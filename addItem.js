@@ -40,6 +40,11 @@ function createTableforNewList(tableId){
     cell2.appendChild(txt);
     cell3.innerHTML= delStr;
     table.appendChild(rows);
+
+    chbox.style.marginLeft="40px";
+    txt.style.marginRight="20px";
+    //delStr.style.marginRight="5px";
+    
     //console.log("after adding item to table");
     // for(let i = 1; i < document.getElementById(tableId).rows.length ;i++ ){
     //   console.log("value at index ", i, " is ", document.getElementById(tableId).rows[i].cells[1].children[0].value)
