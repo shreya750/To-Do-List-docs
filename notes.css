@@ -1,0 +1,182 @@
+.html{
+    background-color: rgb(186, 224, 248);
+  }
+  .body{
+    font-family: 'Pacifico', cursive;
+      font-size: 15px; 
+      padding-top: 3em;
+      cursor: pointer;
+      
+    }
+  .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+  
+    }
+  
+  /* * {
+      box-sizing: border-box;
+   } */
+  
+   .left, .right, .center {
+      float: left;
+      width: 33%;
+      padding: 10px;
+      height: 600px;
+      text-align: center;
+   }
+  
+   
+   .bottom{
+      float: top;
+      align-items: baseline;
+      width:100%;    
+      margin-left:47%;
+     
+      
+  }
+   
+   /* .container:after {
+      clear: both;
+   } */
+  
+    
+  .h1{
+      font-family: 'Times New Roman', Times, serif;
+      color:black ;
+      text-align:center;
+      border:5px solid black;
+   
+   
+   }
+   .wrapper{
+       padding:5pz;
+       max-width: 960px;
+       width: 95%;
+       margin:20px auto;
+   }
+  .column{
+      display:flex;
+      flex-flow:row wrap;
+      justify-content: center;
+      margin:5px;
+  }
+   
+  .input{  /*not woking*/
+      /*border:none;
+      border-color: transparent;*/
+      outline:none;
+  }
+  
+  /* https://www.w3schools.com/css/css3_buttons.asp */
+  
+  /*white base,black text,black border,on hover black*/
+  .buttons{  /*remove grey color from buttons*/
+      background-color: white;
+      color:black;
+      border:1px solid black;
+      /* border-radius: 1px; */
+      transition-duration: 0.4s;
+      padding:5px  5px;
+      text-align:center;
+      text-decoration: none;
+      font-size:12px;
+      /*width:60px ;*/
+      width:fit-content;
+  
+  }
+  .buttons:hover{
+      background-color: black;
+      color:white;
+  }
+  .delButton:hover{
+    background-color: black;
+      color:white;
+  }
+  
+    #todoTable1 {
+      border-collapse: collapse;
+      width: 70%;
+      text-align: center;
+      text-size-adjust: 10%;
+    }
+    #todoTable1 th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    #todoTable1 tr:hover {background-color:#f5f5f5;}
+  
+    #todoTable2 {
+      border-collapse: collapse;
+      width: 70%;
+      text-align: center;
+      text-size-adjust: 10%;
+    }
+    #todoTable2 th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    #todoTable2 tr:hover {background-color:#f5f5f5;}
+    .right{
+      /* background:repeating-linear-gradient(135deg, hsl(204,76%,70%) 0px, hsl(204,76%,70%) 105px,hsl(249,76%,70%) 105px, hsl(249,76%,70%) 210px,hsl(294,76%,70%) 210px, hsl(294,76%,70%) 315px,hsl(339,76%,70%) 315px, hsl(339,76%,70%) 420px,hsl(24,76%,70%) 420px, hsl(24,76%,70%) 525px,hsl(69,76%,70%) 525px, hsl(69,76%,70%) 630px,hsl(114,76%,70%) 630px, hsl(114,76%,70%) 735px,hsl(159,76%,70%) 735px, hsl(159,76%,70%) 840px); */
+      box-sizing: border-box;
+      box-shadow: wheat;
+    }
+    .heading{
+      background-color: rgb(186, 224, 248);
+      margin-top: 30px;
+      /* padding-top: 3px; */
+      margin-right: 50px;
+      margin-bottom: 10px;
+      width:80%;
+  
+    }
+    .heading:hover{
+      background-color:  rgb(144, 201, 236);
+    }
+    #title3{
+      margin-top: 30px;
+      padding-top: 7px;
+      margin-right: 50px;
+      margin-bottom: 10px;
+    }
+    #todoTable3 {
+      border-collapse: collapse;
+      width: 70%;
+      text-align: center;
+      text-size-adjust: 10%;
+    }
+    #todoTable3 th{
+      background-color:#C6C6C6;
+    }
+    #todoTable3 th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    #todoTable3 tr:hover {background-color:#f5f5f5;}
+  
+  
+  .newButton{  /*remove grey color from buttons*/
+      background-color: white;
+      color:black;
+      border:1px solid black;
+      /* border-radius: 3px; */
+      transition-duration: 0.4s;
+      padding:5px  5px;
+      text-align:center;
+      text-decoration: none;
+      font-size:12px;
+      width:fit-content;
+      animation: cubic-bezier(1, 0, 0, 1);
+  }
+  .newButton:hover{
+      background-color: black;
+      color:white;
+  }
+  
+  
+  

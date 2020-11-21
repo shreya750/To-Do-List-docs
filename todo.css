@@ -1,27 +1,23 @@
-/*
-use flexbox for columns-
-https://css-tricks.com/snippets/css/a-guide-to-flexbox/
-
-
-make checkbox in to-do
-*/
+.html{
+  background-color: rgb(186, 224, 248);
+}
 .body{
-    font-family: 'Times New Roman', Times, serif;
+  font-family: 'Pacifico', cursive;
     font-size: 15px; 
     padding-top: 3em;
     cursor: pointer;
-}
+    
+  }
 .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    
   }
 
 /* * {
     box-sizing: border-box;
  } */
-
- 
 
  .left, .right, .center {
     float: left;
@@ -31,6 +27,7 @@ make checkbox in to-do
     text-align: center;
  }
 
+ 
  .bottom{
     float: top;
     align-items: baseline;
@@ -97,18 +94,7 @@ make checkbox in to-do
   background-color: black;
     color:white;
 }
-/* table {
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
-  th, td {
-    padding: 8px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  tr:hover {background-color:#f5f5f5;} */
+
   #todoTable1 {
     border-collapse: collapse;
     width: 70%;
@@ -134,14 +120,22 @@ make checkbox in to-do
     border-bottom: 1px solid #ddd;
   }
   #todoTable2 tr:hover {background-color:#f5f5f5;}
-
+  .right{
+    /* background:repeating-linear-gradient(135deg, hsl(204,76%,70%) 0px, hsl(204,76%,70%) 105px,hsl(249,76%,70%) 105px, hsl(249,76%,70%) 210px,hsl(294,76%,70%) 210px, hsl(294,76%,70%) 315px,hsl(339,76%,70%) 315px, hsl(339,76%,70%) 420px,hsl(24,76%,70%) 420px, hsl(24,76%,70%) 525px,hsl(69,76%,70%) 525px, hsl(69,76%,70%) 630px,hsl(114,76%,70%) 630px, hsl(114,76%,70%) 735px,hsl(159,76%,70%) 735px, hsl(159,76%,70%) 840px); */
+    box-sizing: border-box;
+    box-shadow: wheat;
+  }
   .heading{
     background-color: rgb(186, 224, 248);
     margin-top: 30px;
-    padding-top: 7px;
+    /* padding-top: 3px; */
     margin-right: 50px;
     margin-bottom: 10px;
+    width:80%;
 
+  }
+  .heading:hover{
+    background-color:  rgb(144, 201, 236);
   }
   #title3{
     margin-top: 30px;
@@ -154,6 +148,7 @@ make checkbox in to-do
     width: 70%;
     text-align: center;
     text-size-adjust: 10%;
+    box-sizing: border-box;
   }
   #todoTable3 th{
     background-color:#C6C6C6;
@@ -169,8 +164,8 @@ make checkbox in to-do
 .newButton{  /*remove grey color from buttons*/
     background-color: white;
     color:black;
-    border:2px solid black;
-    border-radius: 3px;
+    border:1px solid black;
+    /* border-radius: 3px; */
     transition-duration: 0.4s;
     padding:5px  5px;
     text-align:center;
