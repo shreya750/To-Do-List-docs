@@ -6,11 +6,11 @@
     
 }
 
-.body{
+body{
     /* background: linear-gradient(45.34deg, #EA52F8 5.66%, #0066FF 94.35%); */
-    background:repeating-linear-gradient(135deg, hsl(204,76%,70%) 0px, hsl(204,76%,70%) 105px,hsl(249,76%,70%) 105px, hsl(249,76%,70%) 210px,hsl(294,76%,70%) 210px, hsl(294,76%,70%) 315px,hsl(339,76%,70%) 315px, hsl(339,76%,70%) 420px,hsl(24,76%,70%) 420px, hsl(24,76%,70%) 525px,hsl(69,76%,70%) 525px, hsl(69,76%,70%) 630px,hsl(114,76%,70%) 630px, hsl(114,76%,70%) 735px,hsl(159,76%,70%) 735px, hsl(159,76%,70%) 840px);
+    background:linear-gradient(89deg, #FF5EDF 0%, #04CBDE 100%);
+    /* background-image:url(urban-line-315.png) ; */
 }
-
 #columns{
     display:flex;
     flex-direction: column;

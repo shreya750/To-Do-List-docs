@@ -37,7 +37,7 @@
   --spacing: 0.25rem;
   --radius: 0.5rem;
   --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
   --max-width: 1170px;
   --fixed-width: 620px;
 }
@@ -45,11 +45,14 @@
 .html{
   background-color: rgb(4, 60, 95);
 }
-.body{
+body{
   font-family: 'Pacifico', cursive;
     font-size: 15px; 
     padding-top: 3em;
     cursor: pointer;
+    background-color: #D9AFD9;
+    background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+
     
   }
 
@@ -147,59 +150,88 @@
     color:white;
 }
 
-.listTitleInput{
+/* .listTitleInput{
   background: #c6c6c6;
   outline: none;
   border: none;
   color: #000;
   font-size: 1.4rem;
   width: 245px;
+} */
+
+/* TABLE 1*/
+.heading{
+  /* background-color: rgb(186, 224, 248); */
+  margin-top:30px;
+  /* padding-top: 3px; */
+  margin-right: 50px;
+  margin-bottom: 10px;
+  width:80%;
+
+}
+.heading:hover{
+  background-color: #e0d2e0;;
+}
+#title1{
+  margin-top: 30px;
+  padding-top: 7px;
+  margin-right: 50px;
+  margin-bottom: 10px;
 }
 
+#todoTable1 {
+  border-collapse: collapse;
+  width: 70%;
+  text-align: center;
+  text-size-adjust: 10%;
+  box-sizing: border-box;
+}
+#todoTable1 th{
+  background-color:#C6C6C6;
+}
+#todoTable1 th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+#todoTable1 tr:hover {background-color:#f5f5f5;}
+
+.section-card {
+  background: var(--clr-white);
+  border-radius: var(--radius);
+  box-shadow: var(--dark-shadow);
+  transition: var(--transition);
+  padding: 2rem;
+}
+
+/* TABLE 2*/
+
+#title2{
+  margin-top: 30px;
+  padding-top: 7px;
+  margin-right: 50px;
+  margin-bottom: 10px;
+}
+#todoTable2 {
+  border-collapse: collapse;
+  width: 70%;
+  text-align: center;
+  text-size-adjust: 10%;
+  box-sizing: border-box;
+}
+#todoTable2 th{
+  background-color:#C6C6C6;
+}
+#todoTable2 th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+#todoTable2 tr:hover {background-color:#f5f5f5;}
 
 
-  #todoTable1 {
-    border-collapse: collapse;
-    width: 70%;
-    text-align: center;
-    text-size-adjust: 10%;
-  }
-  #todoTable1 th, td {
-    padding: 8px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-  }
-  #todoTable1 tr:hover {background-color:#f5f5f5;}
-
-  #todoTable2 {
-    border-collapse: collapse;
-    width: 70%;
-    text-align: center;
-    text-size-adjust: 10%;
-  }
-  #todoTable2 th, td {
-    padding: 8px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-  }
-  #todoTable2 tr:hover {background-color:#f5f5f5;}
-  .right{
-    /* background:repeating-linear-gradient(135deg, hsl(204,76%,70%) 0px, hsl(204,76%,70%) 105px,hsl(249,76%,70%) 105px, hsl(249,76%,70%) 210px,hsl(294,76%,70%) 210px, hsl(294,76%,70%) 315px,hsl(339,76%,70%) 315px, hsl(339,76%,70%) 420px,hsl(24,76%,70%) 420px, hsl(24,76%,70%) 525px,hsl(69,76%,70%) 525px, hsl(69,76%,70%) 630px,hsl(114,76%,70%) 630px, hsl(114,76%,70%) 735px,hsl(159,76%,70%) 735px, hsl(159,76%,70%) 840px); */
-    box-sizing: border-box;
-    box-shadow: wheat;
-  }
-  .heading{
-    /* background-color: rgb(186, 224, 248); */
-    margin-top: 30px;
-    /* padding-top: 3px; */
-    margin-right: 50px;
-    margin-bottom: 10px;
-    width:80%;
-
-  }
-  .heading:hover{
-    background-color:  rgb(144, 201, 236);
-  }
+  /* TABLE 3*/
+ 
   #title3{
     margin-top: 30px;
     padding-top: 7px;
@@ -223,13 +255,6 @@
   }
   #todoTable3 tr:hover {background-color:#f5f5f5;}
 
-  .section-card {
-    background: var(--clr-white);
-    border-radius: var(--radius);
-    box-shadow: var(--light-shadow);
-    transition: var(--transition);
-    padding: 2rem;
-}
 
 
 .newButton{  /*remove grey color from buttons*/

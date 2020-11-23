@@ -21,12 +21,14 @@
         
     </head>
     <body onload="readMasterBinContent()">
+        
     <div class="container">
         <!-- <section class="column"> -->
             <div class="left">
-                <b>list 1</b>
-                       
-                        <input type="text" id="title1" placeholder="Title"><br>
+                <section class="section-card">
+                    <div class="heading">
+                        <input type="text" id="title1" class = "listTitleInput" placeholder="Title"><br>
+                    </div>
                            <table id="todoTable1" >
                                <tr>
                                    <th>checkbox</th>
@@ -38,9 +40,9 @@
                            
                            <table>
                                 <tr>
-                                <button class="buttons" type="button" onclick="createTableforNewList('todoTable1')">
-                                    Add Item
-                                 </button><!--can add "+" icon(bootstrap)  -->
+                                    <button class="buttons" type="button" onclick="createTableforNewList('todoTable1')">
+                                        <span class="glyphicon glyphicon-plus"></span> Add Item
+                                    </button>
                 
                                </tr>
                             </table>
@@ -52,11 +54,14 @@
                              <!--we save 3 things:1)is the item checked or not 2)description of item 3)datetime of item-->
                              <!-- <button class="buttons" type="button"onclick="deleteContent(); deleteRow(this); addItem();">delete</button> -->
                                 <!--we delete the file from disc-->
-                
+                </section>
             </div>
         
-            <div class="center"><b>To-Do</b>
-                    <input type="text" id="title2" placeholder="Title"><br>
+            <div class="center">
+                <section class="section-card">
+                    <div class="heading">
+                        <input type="text" id="title2" class = "listTitleInput" placeholder="Title"><br>
+                    </div>
                     <table id="todoTable2">
                         <tr>
                             <th>checkbox</th>
@@ -69,8 +74,8 @@
                     <table>
                         <tr>
                             <button class="buttons" type="button" onclick="createTableforNewList('todoTable2')">
-                                Add Item
-                            </button><!--can add "+" icon(bootstrap)  -->
+                                <span class="glyphicon glyphicon-plus"></span> Add Item
+                            </button>
             
                         </tr>
                     </table>
@@ -80,13 +85,13 @@
                      <!--we sav following 3 things:1)is the item checked or not 2)description of item 3)datetime of item-->
                      <!-- <button class="buttons" type="button"onclick="deleteContent(); deleteRow(this); addItem();">delete</button> -->
                         <!--we delete the file from disc-->
-                  
-                </div>
+                 
+                </section>
+            </div>
           
             <div class="right">
                 <section class="section-card">
                 <div class="heading">
-                    <b>list3</b> 
                     <input type="text" id="title3" class = "listTitleInput" placeholder="Title"><br>
                 </div>
                 <table id=todoTable3>
@@ -101,9 +106,9 @@
                 <table >
                     <tbody>
                     <tr >
-                        <button style="margin-right:280px;"class="buttons" type="button" onclick="createTableforNewList('todoTable3')">
+                        <button class="buttons" type="button" onclick="createTableforNewList('todoTable3')">
                             <span class="glyphicon glyphicon-plus"></span> Add Item
-                        </button><!--can add "+" icon(bootstrap)  -->
+                        </button>
         
                     </tr>
                 </tbody>
