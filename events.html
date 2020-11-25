@@ -4,66 +4,86 @@
         <meta charset="utf-8">
         <title>TO-DO(simply)</title>
         <link rel="stylesheet" type="text/css" href="events.css">
+        <script src="saveEventsJSONbin.js"></script>
+        <script src="popup.js"></script>
         
     </head>
-    <body>
+    <body onload="readMasterBinContent()">
         <div id="containers">
             <div class="left"><b>Event</b>
-                 
-                                <textarea id="event1" name="event" placeholder="event title" cols="40" rows="5" wrap="hard"></textarea>
+                <section class="section-card">
+                    <table>
+                        <tr>
+                            <td>
+                                <textarea id="title1" name="event" placeholder="event title" cols="40" rows="5" wrap="hard"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
                                 <textarea id="event1" name="event" placeholder="location" cols="40" rows="5" wrap="hard"></textarea>
-                
-                            timing
-                        <button class="buttons" type="button">delete</button>
-                        
-                        <div class="countdown">
-                            <!-- days -->
-                            <div class="countdown-format">
-                              <div>
-                                <h4 class="days">34</h4>
-                                <span>days</span>
-                              </div>
-                            </div>
-                            <!-- end of days -->
-                            <!-- days -->
-                            <div class="countdown-format">
-                              <div>
-                                <h4 class="hours">34</h4>
-                                <span>hours</span>
-                              </div>
-                            </div>
-                            <!-- end of days -->
-                            <!-- minutes -->
-                            <div class="countdown-format">
-                              <div>
-                                <h4 class="minutes">34</h4>
-                                <span>mins</span>
-                              </div>
-                            </div>
-                            <!-- end of days -->
-                            <!-- minutes -->
-                            <div class="countdown-format">
-                              <div>
-                                <h4 class="seconds">34</h4>
-                                <span>secs</span>
-                              </div>
-                            </div>
-                            <!-- end of days -->
-                          </div>
-                    </div>
+        
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                timing
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            <button class="buttons" type="button">Date-Time<input type="datetime-local" id="calender1" name="calender" ></button>
+                            </button>
+                            <button class="buttons" type="button" onclick="deleteContent('title1','event1','calender1')">delete</button>
+                       
+                        </td>
+                        </tr>
+                    </table>
+                </section>
+            </div>
 
          <div class="center"><b>Event</b>
-                 
+            <section class="section-card">
+                <table>
+                    <tr>
+                        <td>
+                            <textarea id="title2" name="event" placeholder="event title" cols="40" rows="5" wrap="hard"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <textarea id="event2" name="event" placeholder="location" cols="40" rows="5" wrap="hard"></textarea>
+    
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            timing
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button class="buttons" type="button">Date-Time<input type="datetime-local" id="calender2" name="calender" ></button>
+                        </button>
+                        <button class="buttons" type="button" onclick="deleteContent('title2','event2','calender2')">delete</button>
+                    </td>
+                    </tr>
+                </table>
+            </section>     
+            
+     </div>
+
+     <div class="right"><b>Event</b>
+        <section class="section-card">
             <table>
                 <tr>
                     <td>
-                        <textarea id="event1" name="event" placeholder="event title" cols="40" rows="5" wrap="hard"></textarea>
+                        <textarea id="title3" name="event" placeholder="event title" cols="40" rows="5" wrap="hard"></textarea>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <textarea id="event1" name="event" placeholder="location" cols="40" rows="5" wrap="hard"></textarea>
-
+                        <textarea id="event3" name="event" placeholder="location" cols="40" rows="5" wrap="hard"></textarea>
+    
                     </td>
                 </tr>
                 <tr>
@@ -73,44 +93,23 @@
                 </tr>
                 <tr>
                     <td>
-                    <button class="buttons" type="button">delete</button>
-                <!--we delete the file from disc-->
-                    <button class="buttons" type="button">Date-Time<input type="datetime-local" id="calender1" name="calender" ></button>
+                        <button class="buttons" type="button">Date-Time<input type="datetime-local" id="calender3" name="calender" ></button>
                     </button>
+                    <button class="buttons" type="button" onclick="deleteContent('title3','event3','calender3')">delete</button>
                 </td>
                 </tr>
-            </table>
-     </div>
-
-     <div class="right"><b>Event</b>
-                 
-        <table>
-            <tr>
-                <td>
-                    <textarea id="event1" name="event" placeholder="event title" cols="40" rows="5" wrap="hard"></textarea>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <textarea id="event1" name="event" placeholder="location" cols="40" rows="5" wrap="hard"></textarea>
-
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    timing
-                </td>
-            </tr>
-            <tr>
-                <td>
-                <button class="buttons" type="button">delete</button>
-            <!--we delete the file from disc-->
-                <button class="buttons" type="button">Date-Time<input type="datetime-local" id="calender1" name="calender" ></button>
-                </button>
-            </td>
-            </tr>
-        </table>
+            </table> 
+        </section>         
  </div>
     </div>
-    <script src="app.js"></script>
+    <div class="bottom">
+        <button class="newButton"  type="button" onclick=
+        "updateContentforBin('event1','calender1','title1');
+        updateContentforBin('event2','calender2','title2');
+        updateContentforBin('event3','calender3','title3');
+        popupMsg();">
+        save all</button>
+        <div id="snackbar"> events saved!</div>
+    <a href="gottaDo.html"><button class="newButton" type="button">close</button></a>
+    </div>
     </body>
