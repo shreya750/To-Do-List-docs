@@ -3,6 +3,8 @@
     <head>
         <meta charset="utf-8">
         <title>firstpage</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="gottaDo.css">
         <div class="heading">
             <h4>GottaDo</h4>
@@ -15,31 +17,34 @@
 
     <body>
         
-        <div id="columns">
-            <!--add border aound list-->
-            <ul style="list-style-type: none;">
-                <li>To-Do 
-                    <a href="todo.html"><button type="button" >Open </button></a> 
-                </li> <!--add link to open new cards-->
+        <div class="wrapper">
+            <div >
+                <section class="section-card">
+                <div id="text">To-Do</div>
+                <a href="todo.html"><button type="button" >open </button></a>
                 <br>
                 <br>
                 <br>
-                <br>
-                <li>Notes
-                    <a href="notes.html"><button type="button" >Open </button></a> 
-                </li>
-                <br>
-                <br>
-                <br>
-                <br>
-                <li>Events
-                    <a href="events.html"><button type="button" >Open </button></a> 
-                </li>
+                </section>
+            </div>
+            <div>
+                <section class="section-card">
+                    <div id="text">Notes</div>
+                    <a href="notes.html"><button type="button" >open</button></a>
                 <br>
                 <br>
                 <br>
+                </section>
+            </div>
+            <div >
+                <section class="section-card">
+                    <div id="text">Events</div>
+                    <a href="events.html"><button type="button" >open </button></a>
                 <br>
-            </ul>
-        </div>
+                <br>
+                <br>
+                </section>
+            </div>
+          </div>
     </body>
 </html>

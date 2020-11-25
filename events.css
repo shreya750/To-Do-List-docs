@@ -1,10 +1,6 @@
-/* .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-
-  } */
-
+.left{
+    display:grid;
+}
 .buttons{  /*remove grey color from buttons*/
     background-color: white;
     color:black;

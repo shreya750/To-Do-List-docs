@@ -18,6 +18,7 @@
         
         <script src="addItem.js"></script>
         <script src="saveJSONbin.js"></script>
+        <script src="popup.js"></script>
         
     </head>
     <body onload="readMasterBinContent()">
@@ -31,7 +32,7 @@
                     </div>
                            <table id="todoTable1" >
                                <tr>
-                                   <th>checkbox</th>
+                                   <th>v</th>
                                    <th>description</th>
                                    <th></th>
                                </tr>
@@ -46,10 +47,15 @@
                 
                                </tr>
                             </table>
-                        
-                              <button class="buttons" type="button" >Date-Time<input type="datetime-local" 
-                                id="calender1" name="calender" ></button>
-                             <!-- <button class = "buttons" type="button" onclick="updateContentforBin('todoTable1','calender1','title1')">save</button> -->
+                            
+                            <!--ADDING COLLAPSIBLE CALENDER-->
+                            <button type="button" class="collapsible" onclick="collapsible_cal()">Date-Time</button>
+                            <div class="content">
+                                <input type="datetime-local" id="calender1" name="calender" >
+                            </div>
+                              
+                            <!-- <button class="buttons" type="button" >Date-Time<input type="datetime-local" 
+                                id="calender1" name="calender" ></button> -->
                              
                              <!--we save 3 things:1)is the item checked or not 2)description of item 3)datetime of item-->
                              <!-- <button class="buttons" type="button"onclick="deleteContent(); deleteRow(this); addItem();">delete</button> -->
@@ -128,17 +134,11 @@
             <button class="newButton"  type="button" onclick=
             "updateContentforBin('todoTable1','calender1','title1');
             updateContentforBin('todoTable2','calender2','title2');
-            updateContentforBin('todoTable3','calender3','title3');">save all</button>
+            updateContentforBin('todoTable3','calender3','title3');
+            popupMsg();">save all</button>
+        <div id="snackbar"> to-do lists saved!</div>
         <a href="gottaDo.html"><button class="newButton" type="button">close</button></a>
         </div>
-        <div class="toast" data-autohide="false">
-            <!-- <div class="toast-header">
-              Toast Header
-            </div> -->
-            <div class="toast-body">
-              saved!
-            </div>
-          </div>
     </div> 
     
     </body>

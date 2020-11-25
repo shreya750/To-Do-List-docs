@@ -42,9 +42,7 @@
   --fixed-width: 620px;
 }
 
-.html{
-  background-color: rgb(4, 60, 95);
-}
+
 body{
   font-family: 'Pacifico', cursive;
     font-size: 15px; 
@@ -88,41 +86,8 @@ body{
     align-items: baseline;
     width:100%;    
     margin-left:47%;
-   
     
-}
- 
- /* .container:after {
-    clear: both;
- } */
-
-  
-.h1{
-    font-family: 'Times New Roman', Times, serif;
-    color:black ;
-    text-align:center;
-    border:5px solid black;
- 
- 
- }
- .wrapper{
-     padding:5pz;
-     max-width: 960px;
-     width: 95%;
-     margin:20px auto;
- }
-.column{
-    display:flex;
-    flex-flow:row wrap;
-    justify-content: center;
-    margin:5px;
-}
- 
-.input{  /*not woking*/
-    /*border:none;
-    border-color: transparent;*/
-    outline:none;
-}
+  }
 
 /* https://www.w3schools.com/css/css3_buttons.asp */
 
@@ -159,6 +124,46 @@ body{
   width: 245px;
 } */
 
+/*************COLLAPSIBLE BUTTON*****************/
+  /* Style the button that is used to open and close the collapsible content */
+  .collapsible {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+  }
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, .collapsible:hover {
+    background-color: #ccc;
+  }
+  
+  /* Style the collapsible content. Note: hidden by default */
+  .content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+  }
+  
+  .collapsible:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: white;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+  }
+  
+  /******************************/
 /* TABLE 1*/
 .heading{
   /* background-color: rgb(186, 224, 248); */
@@ -275,4 +280,51 @@ body{
     color:white;
 }
 
+/* The snackbar - position it at the bottom and in the middle of the screen */
+/******************************/
+#snackbar {
+  visibility: hidden; /* Hidden by default. Visible on click */
+  min-width: 250px; /* Set a default minimum width */
+  margin-left: -125px; /* Divide value of min-width by 2 */
+  background-color: #333; /* Black background color */
+  color: #fff; /* White text color */
+  text-align: center; /* Centered text */
+  border-radius: 2px; /* Rounded borders */
+  padding: 16px; /* Padding */
+  position: fixed; /* Sit on top of the screen */
+  z-index: 1; /* Add a z-index if needed */
+  left: 50%; /* Center the snackbar */
+  bottom: 30px; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+  visibility: visible; /* Show the snackbar */
+  /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+  However, delay the fade out process for 2.5 seconds */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+/******************************/
 
