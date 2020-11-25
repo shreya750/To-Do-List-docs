@@ -4,11 +4,10 @@
         <meta charset="utf-8">
         <title>firstpage</title>
         <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
         <link rel="stylesheet" type="text/css" href="gottaDo.css">
-        <div class="heading">
-            <h4>GottaDo</h4>
-        </div>
+        
+        
             <br>
             <br>
             <br>
@@ -16,33 +15,26 @@
     </head>
 
     <body>
-        
         <div class="wrapper">
-            <div >
+            <div class="heading">
+                <img src="Gotta Do-logo.png" alt="Gotta Do" width="500">
+            </div>
+        </div>
+        <div class="wrapper">
+            <div onclick="location.href='todo.html';" style="cursor: pointer;"> 
+
                 <section class="section-card">
-                <div id="text">To-Do</div>
-                <a href="todo.html"><button type="button" >open </button></a>
-                <br>
-                <br>
-                <br>
+                <div id="text" >To-Do</div>
                 </section>
             </div>
-            <div>
+            <div onclick="location.href='notes.html';" style="cursor: pointer;">
                 <section class="section-card">
                     <div id="text">Notes</div>
-                    <a href="notes.html"><button type="button" >open</button></a>
-                <br>
-                <br>
-                <br>
                 </section>
             </div>
-            <div >
+            <div onclick="location.href='events.html';" style="cursor: pointer;">
                 <section class="section-card">
                     <div id="text">Events</div>
-                    <a href="events.html"><button type="button" >open </button></a>
-                <br>
-                <br>
-                <br>
                 </section>
             </div>
           </div>
