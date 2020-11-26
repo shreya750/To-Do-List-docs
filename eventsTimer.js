@@ -22,13 +22,16 @@ const months = [
     'Saturday',
   ];
 
-let tempDate = new Date();
-let tempYear = tempDate.getFullYear();
-let tempMonth = tempDate.getMonth();
-let tempDay = tempDate.getDate();
-const futureDate = new Date(tempYear, tempMonth, tempDay + 10, 11, 30, 0);
+function setEventTimer(dateTime, id){  
+// let tempDate = new Date();
+// let tempYear = tempDate.getFullYear();
+// let tempMonth = tempDate.getMonth();
+// let tempDay = tempDate.getDate();
+const futureDate = new Date(dateTime);
+console.log("setting time to ", futureDate);
 
 const year = futureDate.getFullYear();
+console.log("parsed years as ", year)
 const hours = futureDate.getHours();
 const minutes = futureDate.getMinutes();
 
@@ -38,10 +41,21 @@ const weekday = weekdays[futureDate.getDay()];
 const date = futureDate.getDate();
 
 //check this line
-giveaway.textContent = `giveaway ends on ${weekday}, ${date} ${month} ${year} ${hours}:${minutes}am`;
+// giveaway.textContent = `giveaway ends on ${weekday}, ${date} ${month} ${year} ${hours}:${minutes}am`;
 
 const futureTime = futureDate.getTime();
-function getRemaindingTime() {
+getRemainingTime(futureTime, id);
+let countdown = setInterval(function (){getRemainingTime(futureTime,id);}, 1000);
+
+
+  }
+
+function getRemainingTime(futureTime, id) {
+  var selectorId = `.deadline-format-${id} h4`
+  const items = document.querySelectorAll(selectorId);
+  const giveaway = document.querySelector('.giveaway');
+  const deadline = document.querySelector('.deadline');
+  // console.log("items are ", items);
     const today = new Date().getTime();
   
     const t = futureTime - today;
@@ -80,7 +94,6 @@ function getRemaindingTime() {
   }
 
   // countdown;
-let countdown = setInterval(getRemaindingTime, 1000);
+
 //set initial values
-getRemaindingTime();
 

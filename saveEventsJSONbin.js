@@ -68,7 +68,7 @@ function displayResponseData(binArray){
         //tableIDarray.push(tableId);
         binMap.set(eventId,binId);
         console.log(`generating table id ${eventId} for binId ${binId}`);
-        readBinContentAndLoadTable(binId,eventId,calenderId,titleId);  
+        readBinContentAndLoadTable(binId,eventId,calenderId,titleId,j+1);  
     }
 }
 
@@ -87,7 +87,7 @@ function readMasterBinContent() {
     req.send();
 }
 
-function readBinContentAndLoadTable(binId,eventId,calenderId,titleId) {
+function readBinContentAndLoadTable(binId,eventId,calenderId,titleId,indexId) {
     let req=new XMLHttpRequest();
     console.log("readcontent called");
     req.onreadystatechange = () => {
@@ -99,6 +99,8 @@ function readBinContentAndLoadTable(binId,eventId,calenderId,titleId) {
         document.getElementById(eventId).value=parsed.location;
         document.getElementById(titleId).value=parsed.eventTitle;
         document.getElementById(calenderId).value=parsed.time;
+        
+        setEventTimer(parsed.time,indexId);
             return(req.responseText);
         }
     };
