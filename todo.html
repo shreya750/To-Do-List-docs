@@ -29,6 +29,8 @@
                 <section class="section-card">
                     <div class="heading">
                         <input type="text" id="title1" class = "listTitleInput" placeholder="Title"><br>
+                        <button class="buttons" type="button" >date-time<input type="datetime-local" 
+                            id="calender1" name="calender" ></button>
                     </div>
                            <table id="todoTable1" >
                                <tr>
@@ -47,15 +49,6 @@
                 
                                </tr>
                             </table>
-                            
-                            <!--ADDING COLLAPSIBLE CALENDER-->
-                            <button type="button" class="collapsible" onclick="collapsible_cal()">Date-Time</button>
-                            <div class="content">
-                                <input type="datetime-local" id="calender1" name="calender" >
-                            </div>
-                              
-                            <!-- <button class="buttons" type="button" >Date-Time<input type="datetime-local" 
-                                id="calender1" name="calender" ></button> -->
                              
                              <!--we save 3 things:1)is the item checked or not 2)description of item 3)datetime of item-->
                              <!-- <button class="buttons" type="button"onclick="deleteContent(); deleteRow(this); addItem();">delete</button> -->
@@ -66,7 +59,10 @@
             <div class="center">
                 <section class="section-card">
                     <div class="heading">
+                        
                         <input type="text" id="title2" class = "listTitleInput" placeholder="Title"><br>
+                        <button class="buttons" type="button" >date-time<input type="datetime-local" id="calender2"
+                            name="calender" ></button>
                     </div>
                     <table id="todoTable2">
                         <tr>
@@ -85,8 +81,7 @@
             
                         </tr>
                     </table>
-                    <button class="buttons" type="button" >Date-Time<input type="datetime-local" id="calender2"
-                         name="calender" ></button>
+                    
                      <!-- <button class = "buttons" type="button" onclick="updateContentforBin('todoTable2','calender2','title2')">save</button> -->
                      <!--we sav following 3 things:1)is the item checked or not 2)description of item 3)datetime of item-->
                      <!-- <button class="buttons" type="button"onclick="deleteContent(); deleteRow(this); addItem();">delete</button> -->
@@ -99,7 +94,9 @@
                 <section class="section-card">
                 <div class="heading">
                     <input type="text" id="title3" class = "listTitleInput" placeholder="Title"><br>
-                </div>
+                    <button class="buttons" type="button" >date-time
+                        <input type="datetime-local" id="calender3" name="calender" ></button>
+                    </div>
                 <table id=todoTable3>
                     <tr>
                         <th>checkbox</th>
@@ -119,8 +116,6 @@
                     </tr>
                 </tbody>
                 </table>
-                    <button class="buttons" type="button" ><span class="glyphicon glyphicon-hourglass"></span>
-                        <input type="datetime-local" id="calender3" name="calender" ></button>
                      <!-- <button class = "buttons" type="button" onclick="updateContentforBin('todoTable3','calender3','title3')">save</button> -->
                      <!--we sav following 3 things:1)is the item checked or not 2)description of item 3)datetime of item-->
                      <!-- <button class="buttons" type="button"onclick="deleteContent(); deleteRow(this); addItem();">delete</button> -->
