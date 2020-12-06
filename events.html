@@ -7,6 +7,11 @@
         <script src = 'eventsTimer.js'></script>
         <script src="saveEventsJSONbin.js"></script>
         <script src="popup.js"></script>
+
+        <!--for trash icon(bootstrap)-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         
     </head>
     <body onload="readMasterBinContent()">
@@ -16,7 +21,7 @@
                 <section class="section-card">
                     <div class="row">
                         <div class="column">
-                            <img src="https://blogmedia.evbstatic.com/wp-content/uploads/wpmulti/sites/8/shutterstock_199419065.jpg" alt="Avatar woman" class = 'responsive-image'>
+                            <img src="https://blogmedia.evbstatic.com/wp-content/uploads/wpmulti/sites/8/shutterstock_199419065.jpg" alt="New Year Party" class = 'responsive-image'>
                           <br>
                           <div class="deadline">
                             <!-- days -->
@@ -91,7 +96,7 @@
             <section class="section-card">
                 <div class="row">
                     <div class="column">
-                        <img src="https://blogmedia.evbstatic.com/wp-content/uploads/wpmulti/sites/8/shutterstock_199419065.jpg" alt="Avatar woman" class = 'responsive-image'>
+                        <img src="https://sidebarsydney.com.au/wp-content/uploads/HouseParty_1920_2.png" alt="HouseParty" class = 'responsive-image'>
                       <br>
                       <div class="deadline">
                         <!-- days -->
@@ -163,7 +168,7 @@
         <section class="section-card">
             <div class="row">
                 <div class="column">
-                    <img src="https://blogmedia.evbstatic.com/wp-content/uploads/wpmulti/sites/8/shutterstock_199419065.jpg" alt="Avatar woman" class = 'responsive-image'>
+                    <img src="https://im1.dineout.co.in/images/uploads/restaurant/sharpen/3/r/y/p3707-15626640835d245c9357144.jpg" alt="11 Street Lunch" class = 'responsive-image'>
                   <br>
                   <div class="deadline">
                     <!-- days -->
@@ -236,8 +241,11 @@
         updateContentforBin('event2','calender2','title2');
         updateContentforBin('event3','calender3','title3');
         popupMsg();">
-        save all</button>
-        <div id="snackbar"> events saved!</div>
-    <a href="gottaDo.html"><button class="newButton" type="button">close</button></a>
+        <span class="glyphicon glyphicon-floppy-disk"></span>
+        Save All</button>
+        <div id="snackbar"> Events Saved!</div>
+        <a href="gottaDo.html"><button class="newButton" type="button">
+        <span class="glyphicon glyphicon-remove"></span>
+        Close</button></a>
     </div>
     </body>

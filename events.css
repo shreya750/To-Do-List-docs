@@ -75,10 +75,22 @@ input[type="datetime-local"]{
   max-width: 300px;
   height: auto;
   display: block;
-  margin-left: 5%;
+  /* margin-left: 5%; */
   margin-right: auto;
+  margin-top: 30px;
   width: 50%;
   
+}
+
+textarea {
+  outline: none;
+  /* border: none; */
+  float: left;
+  width: 100%;
+  min-height: 75px;
+  outline: none;
+  resize: none;    
+
 }
 
 /* Clear floats after the columns */
@@ -196,11 +208,10 @@ input[type="datetime-local"]{
     color:white;
 }
   .bottom{
-    float: top;
     align-items: baseline;
-    width:50%;    
-    margin-bottom:47%;
+    width: 50%;
     padding-right: 5rem;
+    margin-left: 41%;
 
   }
 .newButton{  /*remove grey color from buttons*/
@@ -215,6 +226,7 @@ input[type="datetime-local"]{
     font-size:12px;
     width:fit-content;
     animation: cubic-bezier(1, 0, 0, 1);
+    margin-top: 15px;
 }
 .newButton:hover{
     background-color: black;
