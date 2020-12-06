@@ -76,13 +76,12 @@ body{
     float: left;
     width: 33%;
     padding: 10px;
-    height: 600px;
+    /* height: 696px; */
     text-align: center;
  }
 
  
  .bottom{
-    float: top;
     align-items: baseline;
     width:100%;    
     margin-left:47%;
@@ -104,6 +103,7 @@ body{
     font-size:12px;
     /*width:60px ;*/
     width:fit-content;
+    margin-top: 15px;
 
 }
 .buttons:hover{
@@ -115,14 +115,15 @@ body{
     color:white;
 }
 
-/* .listTitleInput{
-  background: #c6c6c6;
+.listTitleInput{
+  /* background: #c6c6c6; */
   outline: none;
   border: none;
-  color: #000;
-  font-size: 1.4rem;
+  /* color: #000; */
+  font-size: 3rem;
   width: 245px;
-} */
+  text-align: center; 
+}
 
 /*************COLLAPSIBLE BUTTON*****************/
   /* Style the button that is used to open and close the collapsible content */
@@ -167,20 +168,20 @@ body{
 /* TABLE 1*/
 .heading{
   /* background-color: rgb(186, 224, 248); */
-  margin-top:30px;
+  /* margin-top:30px; */
   /* padding-top: 3px; */
   margin-right: 50px;
   margin-bottom: 10px;
-  width:80%;
+  width:100%;
 
 }
 .heading:hover{
-  background-color: #e0d2e0;;
+  /* background-color: #e0d2e0;; */
 }
 #title1{
-  margin-top: 30px;
+  /* margin-top: 30px; */
   padding-top: 7px;
-  margin-right: 50px;
+  /* margin-right: 50px; */
   margin-bottom: 10px;
 }
 
@@ -192,7 +193,7 @@ body{
   box-sizing: border-box;
 }
 #todoTable1 th{
-  background-color:#C6C6C6;
+  background-color:#d3d3d3;
 }
 #todoTable1 th, td {
   padding: 8px;
@@ -212,9 +213,9 @@ body{
 /* TABLE 2*/
 
 #title2{
-  margin-top: 30px;
+  /* margin-top: 30px; */
   padding-top: 7px;
-  margin-right: 50px;
+  /* margin-right: 50px; */
   margin-bottom: 10px;
 }
 #todoTable2 {
@@ -225,7 +226,7 @@ body{
   box-sizing: border-box;
 }
 #todoTable2 th{
-  background-color:#C6C6C6;
+  background-color:#d3d3d3;
 }
 #todoTable2 th, td {
   padding: 8px;
@@ -238,9 +239,9 @@ body{
   /* TABLE 3*/
  
   #title3{
-    margin-top: 30px;
+    /* margin-top: 30px; */
     padding-top: 7px;
-    margin-right: 50px;
+  /* margin-right: 50px; */
     margin-bottom: 10px;
   }
   #todoTable3 {
@@ -251,7 +252,7 @@ body{
     box-sizing: border-box;
   }
   #todoTable3 th{
-    background-color:#C6C6C6;
+    background-color:#d3d3d3;
   }
   #todoTable3 th, td {
     padding: 8px;
