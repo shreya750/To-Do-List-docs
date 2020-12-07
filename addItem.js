@@ -32,14 +32,19 @@ function createTableforNewList(tableId){
         }
     });
 
-    //var del=document.createElement("BUTTON");
-    //del.innerHTML="remove";
-    var delStr = "<input type=\"button\" class = \"buttons\" value=\"Delete\" onclick=\"deleteRow(this)\"/>";
+    
+    //var delStr = "<input type=\"button\" class = \"buttons\" value=\"Delete\" onclick=\"deleteRow(this)\"/>";
+    var delStr = "<button type=\"button\" class=\"buttons\" onclick=\"deleteRow(this)\"> <span class=\"glyphicon glyphicon-trash\" ></span></button>"
     
     cell1.appendChild(chbox);
     cell2.appendChild(txt);
     cell3.innerHTML= delStr;
     table.appendChild(rows);
+
+    chbox.style.marginLeft="40px";
+    txt.style.marginRight="20px";
+    //delStr.style.marginRight="5px";
+    
     //console.log("after adding item to table");
     // for(let i = 1; i < document.getElementById(tableId).rows.length ;i++ ){
     //   console.log("value at index ", i, " is ", document.getElementById(tableId).rows[i].cells[1].children[0].value)
@@ -80,4 +85,22 @@ function todoItem(checkbox, description) {
     return strigified
 }
 
+
+//COLLAPSIBLE 
+function collapsible_cal(){
+  var coll = document.getElementsByClassName("collapsible");
+var i;
+console.log("coll length",coll.length);
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
   
+}

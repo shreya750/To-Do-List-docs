@@ -3,42 +3,109 @@
     <head>
         <meta charset="utf-8">
         <title>Notes</title>
-        <link rel="stylesheet" type="text/css" href="todo.css">
+        <link rel="stylesheet" type="text/css" href="notes.css">
+        
+         <!--font-->
+         <link rel="preconnect" href="https://fonts.gstatic.com">
+         <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+        <!--for trash icon(bootstrap)-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+        <!--animate.css-->
+        <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        
+        <script src="saveNotesJSONbin.js"></script>
+        <script src="popup.js"></script>
         
     </head>
-    <body>
-        <div id="columns">
-            <div class="notes"><b>Notes</b>
-                <!--limit for checkbox/input==== 4-5 items for now-->
-                <!--add checkbox in front of text-->
-                <div class="input">
-                 <input type="text" id="title" placeholder="Title"><br>
+    <body onload="readMasterBinContent()">
+        <div id="containers">
+            <div class="left">
+                <!-- <b>Notes</b> -->
+                <section class="section-card">
+                 <input type="text" id="title1" placeholder="Title"><br>
                  
-                <textarea name="todo" cols="20" rows="20" wrap="hard"></textarea><!--add checkbox and strikethrough -->
-                </div>
-                <!--add new input button,remove the box around input-->
+                <textarea id="note1" name="notes" cols="40" rows="17" wrap="hard"></textarea>
+        
                 <div>
-                 <button class = "buttons" type="button">save</button>
-                 <!--we sav following 3 things:1)is the item checked or not 2)description of item 3)datetime of item-->
-                 <button class="buttons" type="button">delete</button>
-                    <!--we delete the file from disc-->
-              
-                 <a href="gottaDo.html"><button class="buttons" type="button">close</button></a>
-                     <!--go back to first page-->
-                 <button class="buttons" type="button">open</button>  <!--open new,open old cards--> 
-                     <!--we open the saved files by reading the files-->
-             
-                 
-                 <button type="button" class="buttons">
-                     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-alarm" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                 <path fill-rule="evenodd" d="M6.5 0a.5.5 0 0 0 0 1H7v1.07a7.001 7.001 0 0 0-3.273 12.474l-.602.602a.5.5 0 0 0 .707.708l.746-.746A6.97 6.97 0 0 0 8 16a6.97 6.97 0 0 0 3.422-.892l.746.746a.5.5 0 0 0 .707-.708l-.601-.602A7.001 7.001 0 0 0 9 2.07V1h.5a.5.5 0 0 0 0-1h-3zm1.038 3.018a6.093 6.093 0 0 1 .924 0 6 6 0 1 1-.924 0zM8.5 5.5a.5.5 0 0 0-1 0v3.362l-1.429 2.38a.5.5 0 1 0 .858.515l1.5-2.5A.5.5 0 0 0 8.5 9V5.5zM0 3.5c0 .753.333 1.429.86 1.887A8.035 8.035 0 0 1 4.387 1.86 2.5 2.5 0 0 0 0 3.5zM13.5 1c-.753 0-1.429.333-1.887.86a8.035 8.035 0 0 1 3.527 3.527A2.5 2.5 0 0 0 13.5 1z"></path>
-                 </svg>
-                 <button class="buttons" type="button">Date-Time<input type="datetime-local" id="calender" name="calender" ></button>
-                   </button>
+                    
+                <button class="buttons" type="button">Date-Time<input type="datetime-local" id="calender1" name="calender" ></button>
+                   </button>                   
                  <!--link clock icon to date-time button-->
                  <!--can use "onclick feature to hide clock"-->
+                 
+                    <!--we delete the file from disc-->
              </div>
-
-     </div>
+             <div>
+                <button class="buttons" type="button" onclick="deleteContent('title1','note1','calender1')">
+                    <span class="glyphicon glyphicon-trash" ></span>
+                     Clear Notes</button>
+             </div>
+            </section>
+             
         </div>
-    </body>
+
+        <div class="center">
+            <!-- <b>Notes</b> -->
+            <section class="section-card">
+            <input type="text" id="title2" placeholder="Title"><br>
+            
+           <textarea id="note2" name="notes" cols="40" rows="17" wrap="hard"></textarea>
+   
+           <div>
+            
+               <!--we delete the file from disc-->
+           <button class="buttons" type="button">Date-Time<input type="datetime-local" id="calender2" name="calender" ></button>
+              </button>
+            <!--link clock icon to date-time button-->
+            <!--can use "onclick feature to hide clock"-->
+        </div>
+        <div>
+            <button class="buttons" type="button" onclick="deleteContent('title2','note2','calender2')">
+                <span class="glyphicon glyphicon-trash" ></span>
+                 Clear Notes</button>
+        </div>
+    </section>
+   </div>
+
+        <div class="right">
+            <!-- <b>Notes</b> -->
+            <section class="section-card">
+    <input type="text" id="title3" placeholder="Title"><br>
+    
+   <textarea id="note3" name="notes" cols="40" rows="17" wrap="hard"></textarea>
+
+   <div>
+       <!--we delete the file from disc-->
+   <button class="buttons" type="button">Date-Time<input type="datetime-local" id="calender3" name="calender" ></button>
+      </button>
+    <!--link clock icon to date-time button-->
+    <!--can use "onclick feature to hide clock"-->
+</div>
+
+<div>
+    <button class="buttons" type="button" onclick="deleteContent('title3','note3','calender3')">
+        <span class="glyphicon glyphicon-trash" ></span>
+         Clear Notes</button>
+</div>
+    </section>
+
+    </div>
+</div>
+
+    <div class="bottom">
+        <button class="newButton"  type="button" onclick=
+        "updateContentforBin('note1','calender1','title1');
+        updateContentforBin('note2','calender2','title2');
+        updateContentforBin('note3','calender3','title3');
+        popupMsg();">
+        <span class="glyphicon glyphicon-floppy-disk"></span>
+        Save All</button>
+        <div id="snackbar"> Notes Saved!</div>
+    <a href="gottaDo.html"><button class="newButton" type="button">
+        <span class="glyphicon glyphicon-remove"></span>
+        Close</button></a>
+    </div>
+</body>
