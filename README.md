@@ -14,10 +14,14 @@
 
 # Sample Images
 * ### Home Page
-![Drag Racing](https://icatcare.org/app/uploads/2018/07/Thinking-of-getting-a-cat.png)
+* ![Home Page Sample Image](sampleImages/gottaDoHome.png)
+
 * ### To Do List
-![Drag Racing](https://icatcare.org/app/uploads/2018/07/Thinking-of-getting-a-cat.png)
+* ![To Do List Sample Image](sampleImages/todoList.png)
+
 * ### Events
-![Drag Racing](https://icatcare.org/app/uploads/2018/07/Thinking-of-getting-a-cat.png)
+* ![Events Sample Image](sampleImages/events.png)
+
 * ### Notes
-![Drag Racing](https://icatcare.org/app/uploads/2018/07/Thinking-of-getting-a-cat.png)
+* ![Events Sample Image](sampleImages/notes.png)
+
