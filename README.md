@@ -14,14 +14,11 @@
 
 # Sample Images
 * ### Home Page
-* ![Home Page Sample Image](sampleImages/gottaDoHome.png)
-
+![Home Page Sample Image](sampleImages/gottaDoHome.png)
 * ### To Do List
-* ![To Do List Sample Image](sampleImages/todoList.png)
-
+ ![To Do List Sample Image](sampleImages/todoList.png)
 * ### Events
-* ![Events Sample Image](sampleImages/events.png)
-
+ ![Events Sample Image](sampleImages/events.png)
 * ### Notes
-* ![Events Sample Image](sampleImages/notes.png)
+ ![Events Sample Image](sampleImages/notes.png)
 
