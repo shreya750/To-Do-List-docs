@@ -1,4 +1,0 @@
-Heading	Content
-First	Test1
-Second	Second1
-Third	Third1
