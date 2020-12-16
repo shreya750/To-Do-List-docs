@@ -2,16 +2,17 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>TO-DO(simply)</title>
-        <link rel="stylesheet" type="text/css" href="events.css">
-        <script src = 'eventsTimer.js'></script>
-        <script src="saveEventsJSONbin.js"></script>
-        <script src="popup.js"></script>
+        <title>Events</title>
+        <link rel="stylesheet" type="text/css" href="css/events.css">
+        <script src = 'js/eventsTimer.js'></script>
+        <script src="js/saveEventsJSONbin.js"></script>
+        <script src="js/popup.js"></script>
 
         <!--for trash icon(bootstrap)-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel = "icon" href = "title-icon.png"  style="background-color:white" type = "image/x-icon">
         
     </head>
     <body onload="readMasterBinContent()">
@@ -244,7 +245,7 @@
         <span class="glyphicon glyphicon-floppy-disk"></span>
         Save All</button>
         <div id="snackbar"> Events Saved!</div>
-        <a href="gottaDo.html"><button class="newButton" type="button">
+        <a href="index.html"><button class="newButton" type="button">
         <span class="glyphicon glyphicon-remove"></span>
         Close</button></a>
     </div>
