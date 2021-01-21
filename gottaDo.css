@@ -55,7 +55,8 @@
 
 body{
     /* background: linear-gradient(45.34deg, #EA52F8 5.66%, #0066FF 94.35%); */
-    background:linear-gradient(89deg, #FF5EDF 0%, #04CBDE 100%);
+    /*background:linear-gradient(89deg, #FF5EDF 0%, #04CBDE 100%);*/
+    background:linear-gradient(45deg, #A7BFE8, #6190E8);
     font-family: 'Ubuntu', sans-serif;
 }
 
