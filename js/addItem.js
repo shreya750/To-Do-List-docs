@@ -68,7 +68,7 @@ function todoItem(checkbox, description) {
     for(let i=1;i<countRows(tableId);i++){
         var check=document.getElementById(tableId).rows[i].cells[0].children[0].checked;
         var textArea=document.getElementById(tableId).rows[i].cells[1].children[0].value;
-        //console.log("getValues me dono ki val ",check,textArea," ",i);
+      
          todoList.push( new todoItem(check,textArea))
     }
     var dateTime=document.getElementById(calenderId).value;

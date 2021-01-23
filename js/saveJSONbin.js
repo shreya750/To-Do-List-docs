@@ -70,9 +70,7 @@ function insertRowInTable(txtbox,checkbox, tableId){
     var txt= document.createElement("TEXTAREA");
     txt.value=txtbox;
     //var des=txt.value;
-    //strike-through can be added to texts only. txt.value me style property add honi chahiye
-//console.log("getting txts frm server!",des);
-
+   
     var chbox=document.createElement("INPUT");
     chbox.setAttribute("type","checkbox");
     chbox.value=checkbox;
@@ -125,7 +123,7 @@ function displayMasterbinData(response){
     displayResponseData(binArray);
 }
 //run this code
-//create baby bins in finalList format
+//create bins in finalList format
 //read data from individual bin
 function displayResponseData(binArray){
     var binId;
@@ -197,25 +195,5 @@ function readBinContentAndLoadTable(binId,tableId,calenderId,titleId) {
     req.setRequestHeader("secret-key","$2b$10$2YIqY.HRw6Eg3CrHnUOQQOi2kAM1VC/.BHDisAClfkSGAZGfKtZGq");
     req.send();
 }
-
-//https://www.w3schools.com/js/js_json_html.asp    --for displaying JSON
-
-// obj = { table: "customers", limit: 20 };
-// dbParam = JSON.stringify(obj);
-// xmlhttp = new XMLHttpRequest();
-// xmlhttp.onreadystatechange = function() {
-//   if (this.readyState == 4 && this.status == 200) {
-//     myObj = JSON.parse(this.responseText);
-//     txt += "<table border='1'>"
-//     for (x in myObj) {
-//       txt += "<tr><td>" + myObj[x].name + "</td></tr>";
-//     }
-//     txt += "</table>"
-//     document.getElementById("demo").innerHTML = txt;
-//   }
-// }
-// xmlhttp.open("POST", "json_demo_db_post.php", true);
-// xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-// xmlhttp.send("x=" + dbParam);
 
 

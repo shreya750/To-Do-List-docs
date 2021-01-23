@@ -53,7 +53,7 @@ function displayMasterbinData(response){
 }
 
 //run this code
-//create baby bins in finalList format
+//create  bins in finalList format
 //read data from individual bin
 function displayResponseData(binArray){
     var binId;
