@@ -22,4 +22,5 @@
 * ### Notes
  ![Events Sample Image](sampleImages/notes.png)
 
-Deployment steps:https://gist.github.com/wh1tney/2ad13aa5fbdd83f6a489
+### Deployment steps:
+https://gist.github.com/wh1tney/2ad13aa5fbdd83f6a489
