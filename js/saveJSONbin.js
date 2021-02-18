@@ -23,7 +23,7 @@ req.send(getValues());
 }
 
 
-function updateContentforBin(tableId,calenderId,titleId){
+function updateContentforBin(tableId,calenderId,titleId){//called with 'save all' button
     //console.log("save clicked");
     let req = new XMLHttpRequest();
     req.onreadystatechange = () => {
@@ -59,7 +59,7 @@ function deleteRow(btn) {
 
 
 
-function insertRowInTable(txtbox,checkbox, tableId){
+function insertRowInTable(txtbox,checkbox, tableId){ //5th function called
    // console.log("create table called");
     var table =document.getElementById(tableId);
     var rows=table.insertRow(0);
@@ -112,7 +112,7 @@ txt.style.marginRight="20px";
 }
 
 //master bin created to store separate bin IDs.
-function displayMasterbinData(response){
+function displayMasterbinData(response){ //2nd function called
     console.log("final response data: ",response);
     var parsed=JSON.parse(response);
     console.log("final parsed data: ",parsed);
@@ -125,7 +125,7 @@ function displayMasterbinData(response){
 //run this code
 //create bins in finalList format
 //read data from individual bin
-function displayResponseData(binArray){
+function displayResponseData(binArray){ //3rd function called
     var binId;
 
     for(let j=0;j<binArray.length;j++){
@@ -138,7 +138,7 @@ function displayResponseData(binArray){
         tableIDarray.push(tableId);
         binMap.set(tableId,binId);
         console.log(`generating table id ${tableId} for binId ${binId}`);
-        readBinContentAndLoadTable(binId,tableId,calenderId,titleId);  
+        readBinContentAndLoadTable(binId,tableId,calenderId,titleId);  //will be called 3 times for 3 baby bins
     }
      
 
@@ -149,7 +149,7 @@ function deleteList(btn){
     delList.parentNode.removeChild(delList);
 }
 
-function readMasterBinContent() {
+function readMasterBinContent() {   //1st function called onload
     let req=new XMLHttpRequest();
     console.log("readcontent called");
     req.onreadystatechange = () => {
@@ -164,7 +164,7 @@ function readMasterBinContent() {
     req.send();
 }
 
-function readBinContentAndLoadTable(binId,tableId,calenderId,titleId) {
+function readBinContentAndLoadTable(binId,tableId,calenderId,titleId) { //4th function called
     let req=new XMLHttpRequest();
     console.log("readcontent called");
     req.onreadystatechange = () => {
