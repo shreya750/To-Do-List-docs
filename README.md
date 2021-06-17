@@ -2,15 +2,15 @@
 * ### This is fully functional webapp to allow users create and organize Todolists, Events, Notes.
 ## Live Demo - https://thawing-brushlands-36192.herokuapp.com/
 
-# Technologies used - 
-## FrontEnd - 
-* ### HTML
-* ### CSS
-* ### JavaScript
-* ### Bootstrap
-## Backend -
-* ### AJAX
-* ### JsonBin API for JSON Storage.
+## Technologies used - 
+### FrontEnd - 
+* #### HTML
+* #### CSS
+* #### JavaScript
+* #### Bootstrap
+### Backend -
+* #### AJAX
+* #### JsonBin API for JSON Storage.
 
 # Sample Images
 * ### Home Page
