@@ -1,5 +1,5 @@
 # Gotta Do
-* ### This is fully functional webapp to allow users create and organize Todolists, Events, Notes.
+* ### This is fully functional webapp to allow users to create and organize Todolists, Events, Notes.
 ## Live Demo - https://thawing-brushlands-36192.herokuapp.com/
 
 ## Technologies used - 
